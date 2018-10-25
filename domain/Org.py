@@ -9,5 +9,5 @@ class Org(db.Model):
   def to_json(self):
     return {
       'id': self.id_org,
-      'nome': self.ds_name,
+      'ds_name': self.ds_name,
     }
