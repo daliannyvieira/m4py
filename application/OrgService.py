@@ -31,7 +31,7 @@ class OrgResource(Resource):
       if org:
         return jsonify(org)
       else:
-        return 'org nao encontrada', 404
+        return 'ORG_NOT_FOUND', 404
     except Exception as exc:
       return exc, 500
 
