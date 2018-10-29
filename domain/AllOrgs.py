@@ -27,18 +27,6 @@ class AllOrgs():
       raise
 
   @staticmethod
-  def create_org(attributes):
-    try:
-      new_org = Org()
-      new_org.ds_name = attributes['ds_name']
-      db.session.add(new_org)
-      db.session.commit()
-      return new_org.to_json()
-    except Exception as e:
-      db.session.rollback()
-      raise
-
-  @staticmethod
   def read_one_org(id_org):
     try:
       org = db.session.query(Org).filter_by(id_org = id_org).first()
